@@ -20,3 +20,29 @@
   height: auto;
 }
 
+.midde_cont {
+  margin-top: 50px; /* Adiciona um espaçamento de 50 pixels */
+}
+
+.profile_img {
+  margin-right: 15px;
+}
+
+.profile_contant {
+  margin-left: 15px;
+}
+
+.tab_style2{
+  margin-top: 25px;
+}
+
+.white_box{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0, 0.1);
+}
+
+
+.d-flex_flex-column{
+  background-color: #F8F8F8;
+}
