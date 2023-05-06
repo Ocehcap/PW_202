@@ -1,14 +1,3 @@
-.number_trades{
-  width: 85%; 
-  color: #455A64;
-  font-style: Poppins;       
-}
-
-.contact_inner{
-  color: #455A64;
-
-}
-
 .full.dis_flex.center_text {
   display: flex;
   align-items: center;
@@ -42,7 +31,17 @@
   box-shadow: 0 2px 4px rgba(0,0,0, 0.1);
 }
 
-
 .d-flex_flex-column{
   background-color: #F8F8F8;
+}
+
+.number_of_trades{
+    width: 1000%; 
+    color: #455A64;
+    font-style: Poppins;         
+}
+
+.contact .e-mail .list-unstyled .contact_inner{
+  color:#455A64;
+  font-style: Poppins;    
 }
