@@ -19,11 +19,13 @@
       rel="stylesheet"
     />
 
+    <!-- CSS file -->
     <link href="./css/profile.css" rel="stylesheet" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
   </head>
+
 
   <body class="d-flex flex-column">
     <main class="flex-shrink-0">
@@ -37,8 +39,6 @@
       filter: brightness(50%);
     ">
         <div class="container px-5">
-
-
           <a class="navbar-brand" href="index.html"> Magpie Nest</a>
         
           <button
@@ -189,30 +189,44 @@
                                     href="#recent_activity"
                                     role="tab"
                                     aria-selected="true"
+                                    
                                     >Recent Activity</a
                                   >
                                   <a
                                     class="nav-item nav-link"
                                     id="nav-profile-tab"
                                     data-toggle="tab"
-                                    href="#project_worked"
+                                    href="#history_trade"
                                     role="tab"
                                     aria-selected="false"
-                                    >Projects Worked on</a
+                                    >History Trade</a
                                   >
+                               
                                   <a
                                     class="nav-item nav-link"
                                     id="nav-contact-tab"
                                     data-toggle="tab"
-                                    href="#profile_section"
+                                    href="#trade_offers"
                                     role="tab"
                                     aria-selected="false"
-                                    >Profile</a
+                                    >Trade offers</a
                                   >
                                 </div>
                               </nav>
                               <div class="tab-content" id="nav-tabContent">
                                 <!-- vai ficar o contéudo da tab -->
+                                <div class="tab-pane fade active show" id="recent_activity"
+                                role="tabpanel" aria-labelledby="nav-home-tab">
+                                <div class="trade_list_main">
+                                  <header class="snkr_trade__header">
+                                    <div class="snkr-trade_user">
+                                    <img loading="lazy" class="snkr-trade__avatarimg" src="https://fpfimagehandler.fpf.pt/FPFImageHandler.ashx?type=Person&amp;id=3025217&amp;op=t&amp;w=325&amp;h=378"
+                                    alt="Mosblood">
+                                    </div>
+
+                                  </header>
+                                </div>
+                              </div>
                               </div>
                             </div>
                           </div>
@@ -244,6 +258,41 @@
         filter: brightness(50%);
       "
     ></footer>
+    
+
+    <!-- Script torna possível a seleção de diferentes items na nav-bar -->
+    <script>
+      var navItems = document.querySelectorAll('.nav-item');
+      
+      navItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+          navItems.forEach(function(item) {
+            item.classList.remove('active');
+          });
+          this.classList.add('active');
+        });
+      });
+    </script>
+
+    <!--JScript que permite trocar de item na nav-bar-->    
+    <script>
+      $(document).ready(function() {
+        // Esconde todas as abas exceto a primeira
+        $(".tab-pane").not(":first").hide();
+        // Adiciona um manipulador de evento de clique a cada item de navegação
+        $(".nav-item").click(function() {
+          // Remove a classe 'active' de todos os itens de navegação
+          $(".nav-item").removeClass("active");
+          // Adiciona a classe 'active' ao item de navegação clicado
+          $(this).addClass("active");
+          // Esconde todas as abas
+          $(".tab-pane").hide();
+          // Mostra a aba correspondente ao item de navegação clicado
+          $($(this).attr("href")).show();
+        });
+      });
+    </script>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->

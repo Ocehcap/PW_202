@@ -45,3 +45,22 @@
   color:#455A64;
   font-style: Poppins;    
 }
+
+.tabbar nav div.nav-tabs .nav-link {
+  border-radius: 0;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.tab_style2 .tabbar nav div.nav-tabs .nav-link.active {
+  background: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+.snkr-trade__avatar {
+  margin-right: 10px;
+  width: 50px;
+  height: auto;
+}
