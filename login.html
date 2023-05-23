@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script>
+      function handleCredentialResponse(response) {}
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id:
+            "568140549227-kss92ngkqmr1t5gm7lg341d9tll7eed6.apps.googleusercontent.com",
+          callback: handleCredentialResponse,
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          {
+            theme: "filled_black",
+            size: "large",
+            type: "standard",
+            shape: "pill",
+            text: "signin_with",
+            locale: "en",
+            logo_alignment: "left",
+          } // customization attributes
+        );
+        google.accounts.id.prompt(); // also display the One Tap dialog
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="buttonDiv"></div>
+  </body>
+</html>
