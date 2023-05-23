@@ -10945,22 +10945,71 @@ html {
 }
 
 .btn-primary {
-  margin-top: 32px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
   background-color: #fff !important;
   color: #000 !important;
   border-color: #fff !important;
   border-radius: 30px !important;
 }
 
-.CORlable {
+.CORlableFILTROS {
   color: #fff;
 }
 
-.form-select {
+.selectFILTROS {
   border: 1px solid #000;
   background-color: #000;
   position: relative;
 }
+
+.CORlableTRADE {
+  color: #000;
+  font-weight: bold;
+}
+
+.selectTRADE{
+  border: 1px solid #000;
+}
+
+.btn-custom {
+  margin-top: 28px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  position: relative;
+}
+
+.btn-custom:before, .btn-custom:after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 2px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.btn-custom:hover {
+  border: 1px solid gray;
+}
+
+.btn-custom:hover:before,
+.btn-custom:hover:after {
+  background-color: gray;
+}
+
+
+
+
 
 
