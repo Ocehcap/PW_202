@@ -20,7 +20,7 @@ function handleCredentialResponse(response) {
           google.accounts.id.renderButton(
             document.getElementById("buttonDiv"),{ 
                 theme: "filled_black", 
-                size: "medium",
+                size: "large",
                 type: "standard",
                 shape: "pill",
                 text: "signin",
